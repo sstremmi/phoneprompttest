@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'eina';
+  src: url('assets/2d57f676e3d6955778fb8acac0176b9a.woff') format('woff'),
+       url('assets/2d57f676e3d6955778fb8acac0176b9a.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: eina, Arial, sans-serif;
+}
+html, body {
+  height: 100%;
+}
+body{
+     -webkit-text-size-adjust: 100%;
+}
+
+.blueBox{
+    background: #00f;
+    color: #fff;
+    border-radius: 40px;
+    padding: 10px 30px;
+}
+.blueBox h1{
+    font-size: 20px;
+}
+
+#welcomeBody{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    user-select: none;
+}
+
+#beginBody{
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#beginBody .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#beginBody .text .paragraph{
+    margin: 30px;
+}
+#beginBody .text .paragraph p{
+    font-size: 20px;
+    text-align: center;
+}
+
+#emotionBody{
+    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: url(assets/body.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+#emotionBody .prompt{
+    font-size: 20px;
+    user-select: none;
+    text-align: center;
+}
+
+#kioskBody{
+    width: 100vw;
+    height: 100vh;
+    background: url(assets/body\ mask_1.gif);
+    background-size: contain;
+    background-position: center;
+}
+
+.spark{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(-20px, -20px);
+    border-radius: 50%;
+    animation: animate .5s ease-in-out forwards;
+}
+
+.perma-spark{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform: translate(30px);
+    border-radius: 50%;
+    animation: perma-animate .5s ease-in-out forwards;
+    filter: blur(6px);
+}
+@keyframes animate{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+@keyframes perma-animate{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    90%{
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
